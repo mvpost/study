@@ -12,7 +12,7 @@ class dop
 
 class dopmore extends dop
 {
-    static public $var3 = apple;
+    static public $var3 = "apple";
     function dopfunc2()
     {
         echo "<br>";
@@ -22,7 +22,7 @@ class dopmore extends dop
 
 class dopmax extends dopmore
 {
-    public $var4 = "blackberry";
+    public $var4 = "strawberry";
     function dopfunc3()
     {
         echo "<br>";
