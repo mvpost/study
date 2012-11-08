@@ -32,4 +32,9 @@ class dopmax extends dopmore
     }
 }
 
+class dopmax2 extends dopmore
+{
+    public $var6 = 1;
+}
+
 
