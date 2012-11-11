@@ -6,7 +6,7 @@ class dop
     {
         $func = __FUNCTION__;
         $clas = __CLASS__;
-        echo "Это метод $func в классе $clas";
+        echo "С„СѓРЅРєС†РёСЏ $func РєР»Р°СЃСЃР° $clas";
     }
 }
 
@@ -16,7 +16,7 @@ class dopmore extends dop
     function dopfunc2()
     {
         echo "<br>";
-        echo "Метод".__FUNCTION__;
+        echo "С‚С‹СЂ".__FUNCTION__;
     }
 }
 
@@ -26,7 +26,7 @@ class dopmax extends dopmore
     function dopfunc3()
     {
         echo "<br>";
-        echo "Метод".__FUNCTION__;
+        echo "РїС‹СЂ".__FUNCTION__;
         echo $var5 = Dopmore::$var3 . $this->var4;
         //echo "<br>" . $this->var1 . $this->var2 . $this->var4;
     }
