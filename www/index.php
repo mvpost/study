@@ -6,6 +6,7 @@
 <body>
 <?php
     require_once "dop.php";
+    require_once "getsmth.php";
     $massiv = array("foo1","foo2",array(1,2,3));
     echo $massiv[2][0];
     echo "<br>";
@@ -18,13 +19,12 @@
         }
     echo "<br>";
 
-    $obj = new dopmax();
+    $obj = new dopmore();
     $obj->var1 = 1;
     $obj->var2 = 5;
     echo $obj->var1 + $obj->var2 . " " . $obj->var3 . "<br>";
     $obj->dopfunc();
     $obj->dopfunc2();
-    $obj->dopfunc3();
 ?>
 </body>
 </html>
