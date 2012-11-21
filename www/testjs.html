@@ -9,13 +9,23 @@
 <a id="link3" href="http://www.bing.ru">—сыль на Bing</a><br>
     <script type="text/javascript">
         document.write("\"\"Hellooooo Woooooorld!");
-        mass =
-                [
-                    ["elem11", "elem12", "elem13"],
-                    ["elem21", "elem22", "elem23"],
-                    ["elem31", "elem32", "elem33"]
-                ];
-        document.write("<br>");
+        mass = Array(
+                Array(1,2,3,4,5,6,7,8),
+                Array(1,2,3,4,5,6,7,8),
+                Array(1,2,3,4,5,6,7,8),
+                Array(1,2,3,4,5,6,7,8),
+                Array(1,2,3,4,5,6,7,8))
+        document.write("<br><br>");
+        // »нициализаци€ массива
+        var j = 0, n = 0, i = 1;
+        a: for(; j < mass.length; j++) {
+            for (n = mass[j].length-i; n > 0; n--) {
+                document.write(mass[j][n]);
+                i++;
+                break;
+            }
+        }
+        document.write("<br><br>");
         link = link1.href;
         document.write("URL такой: " + document.links[2] + ", а length - " + link.length + "<br>");
         for (i=0; i<document.links.length; i++)
