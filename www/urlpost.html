@@ -7,7 +7,14 @@
 <h1>Загрузка страницы в контейнер div</h1>
 <div id='info'>Это предложение будет заменено</div>
 <script>
-    params = "url=oreilly.com";
+    /*$.post("urlpost.php", { params: "url=oreilly.com" },
+        function(data){
+            alert("Data Loaded: " + data);
+        });
+    $(document).ready(function(){
+        $('body').append('<br/>Этот текст добавлен с помощью jQuery');
+    });*/
+    params = "url=google.com";
     request = new ajaxRequest();
     request.open("POST", "urlpost.php", true);
     request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
@@ -16,19 +23,18 @@
 
     request.onreadystatechange = function()
     {
-        if (this.readystate == 4)
+        if (this.readyState == 4)
         {
-            alert(this.readystate);
             if (this.status == 200)
             {
                 if (this.responseText != null)
                 {
                     document.getElementById('info').innerHTML =
-                            this.responseText
+                            this.responseText;
                 }
-                else alert("Ошибка Ajax: Данные не получены")
+                else alert("Ошибка Ajax: Данные не получены");
             }
-            else("Ошибка Alax: " + this.statusText)
+            else alert("Ошибка Alax: " + this.statusText);
         }
     }
 
@@ -39,7 +45,6 @@
         try
         {
             var request = new XMLHttpRequest();
-            alert("!");
         }
         catch(e1)
         {
